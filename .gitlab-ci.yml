@@ -1,0 +1,41 @@
+# these environment variables would normally be configured in the CI enviroment
+variables:
+  SQLALCHEMY_DATABASE_URL: postgresql+psycopg2://kjtqggbo:mf4AheVtaD7Y_mbASUcxQeDHmCvnyjNZ@cornelius.db.elephantsql.com/kjtqggbo
+  SECRET_KEY: 09d25e094faa6ca2556c818166b7a9563b93f7099f6f0f4caa6cf63b88e8d3e7
+  ALGORITHM: HS256
+
+stages:
+  - test
+  - build
+  - deploy
+
+integration-test:
+  stage: test
+  image: python:3.9
+  before_script:
+    - apt update && apt install -y --no-install-recommends libpq-dev postgresql-client postgresql build-essential
+    - pip install psycopg2 psycopg pytest pytest-postgresql
+  script:
+    - cd api
+    - pip install --no-cache-dir --upgrade -r requirements.txt
+    - python -m alembic downgrade head
+    - python -m alembic upgrade head 
+    - python -m pytest
+  allow_failure: true # Inother to submit task
+
+build_image:
+  stage: build
+  tags:
+    - shell
+  before_script:
+    - docker system prune -af # clear docker cache to clean up enough space for building
+  script:
+    - cd api && docker build -t api-image .
+  allow_failure: true
+
+heroku_deploy:
+  stage: deploy
+  script:
+    - gem install dpl
+    - dpl --provider=heroku --app=$HEROKU_APP_NAME --api-key=$HEROKU_PRODUCTION_KEY
+  allow_failure: true

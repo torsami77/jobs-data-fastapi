@@ -19,3 +19,10 @@ build-run-api: postgres build-api run-api
 
 run-api-local:
 	cd api && python3 -m uvicorn main:app --reload
+
+build-ui:
+	cd ui && docker image build -t ui-image .
+
+run-ui:
+	cd ui && docker run -p 3000:3000 --name running-ui -p 80:80 ui-image
+	

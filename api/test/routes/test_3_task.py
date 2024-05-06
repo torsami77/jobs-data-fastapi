@@ -2,7 +2,7 @@ from fastapi.testclient import TestClient
 
 from api.main import app
 from api.src.database.seeds import tasks, users
-from api.test.routes.test_3_user import token
+from api.test.routes.test_2_user import token
 
 client = TestClient(app)
 
@@ -29,10 +29,11 @@ def test_get_all_tasks():
 
 def test_update_task():
     response = client.put(
-        f"{base_url}/task/update/{tasks[1]['id']}",
+        f"{base_url}/task/update/{1}",
         headers={
             "Authorization": f"Bearer {token}"
         },
-        json=(tasks[1])
+        json=(tasks[0])
     )
+    print(response.json())
     assert response.status_code == 200

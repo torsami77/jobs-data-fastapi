@@ -6,6 +6,7 @@ variables:
   POSTGRES_PASSWORD: "mf4AheVtaD7Y_mbASUcxQeDHmCvnyjNZ"
   POSTGRES_SERVER: "cornelius.db.elephantsql.com"
   POSTGRES_DB: "kjtqggbo"
+  SQLALCHEMY_DATABASE_URL: postgresql+psycopg2://kjtqggbo:mf4AheVtaD7Y_mbASUcxQeDHmCvnyjNZ@cornelius.db.elephantsql.com/kjtqggbo
 
 stages:
   - test

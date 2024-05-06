@@ -16,19 +16,12 @@ products =  [
 users = [
     {
         "name": "Samson",
+        "email": "torsami77@textkernel.com",
         "username": "torsami77@textkernel.com",
-        "role": "Customer",
-        "affiliation": "ecommerce",
-        "password": "Sssss007",
-        "hashed_password": "$2b$12$vxvBt0X50IDP.8DRnDTM1usX2X.O4MqvdccrD8c6cPV9426JQ8Q76"
-    },
-    {
-        "name": "Samuel",
-        "username": "samuel@textkernel.com",
         "role": "Employee",
         "affiliation": "ecommerce",
         "password": "Sssss007",
-        "hashed_password": "$2b$12$vxvBt0X50IDP.8DRnDTM1usX2X.O4MqvdccrD8c6cPV9426JQ8Q76"
+        "hashed_password": "$2b$12$BNDsbuRZcnrFRO0FVgwsW.OYaf19YTHqBomdExu6.y7ySLUeZZPYa",
     }
 ]
 
@@ -42,7 +35,6 @@ tasks = [
     "contributors": "1",
     "owner_id": 1,
     "product_id": 1,
-    "id": 1,
     "updated_at": "2024-04-30T22:21:51.807952+01:00",
     "created_at": "2024-04-30T22:21:51.807952+01:00"
   },
@@ -55,7 +47,6 @@ tasks = [
     "contributors": "1",
     "owner_id": 1,
     "product_id": 1,
-    "id": 1,
     "updated_at": "2024-04-30T22:22:40.634392+01:00",
     "created_at": "2024-04-30T22:22:40.634392+01:00"
   },
@@ -68,7 +59,6 @@ tasks = [
     "contributors": "1",
     "owner_id": 1,
     "product_id": 1,
-    "id": 2,
     "updated_at": "2024-04-30T22:21:51.807952+01:00",
     "created_at": "2024-04-30T22:21:51.807952+01:00"
   },

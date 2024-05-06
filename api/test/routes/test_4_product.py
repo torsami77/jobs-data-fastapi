@@ -2,7 +2,7 @@ from fastapi.testclient import TestClient
 
 from api.main import app
 from api.src.database.seeds import tasks, users
-from api.test.routes.test_3_user import token
+from api.test.routes.test_2_user import token
 
 client = TestClient(app)
 

@@ -25,7 +25,7 @@ Your submission should include the following components:
 - Pip3
 
 - Make
-- Environment Variables https://gitlab.com/textkernel-pub/jobfeed/assignments/jobs-data-assignment-samson-samuel/-/blob/main/api/.env_sample?ref_type=heads
+- Environment Variables https://gitlab.com/textkernel-pub/jobfeed/assignments/jobs-data-assignment-samson-samuel/-/blob/main/api/env_sample?ref_type=heads
 
   
 
@@ -54,7 +54,9 @@ Userpage: http://localhost:3000/userpage
 
 - Defined Cross origin permissions
 
-- Implement apllication and package security scans
+- Remove all hard coded env variables
+
+- Implement application, package and security scans
 
 - implement docker image security scan
 

@@ -64,7 +64,8 @@ Userpage: http://localhost:3000/userpage
 
 ### There's alot of room for improvement with this project and few are listed below
 
-- Complete the Front end and implementation
+- Complete the Front-end implementation  and test cases
+- Add unit test to API and more Integration cases
 - Add detail logging across API
-- Implement CI/CD failures
+- Fix CI/CD failures
 - Implements GitOps for Deployment

@@ -22,7 +22,7 @@ Your submission should include the following components:
 - Pip3
 
 - Make
-- Environment Variables https://github.com/torsami77/jobs-data-fastapi/edit/main/env_sample?ref_type=heads
+- Environment Variables https://github.com/torsami77/jobs-data-fastapi/edit/main/env_sample
 
   
 
